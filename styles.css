@@ -4,16 +4,21 @@
     box-sizing: border-box;
 }
 body{
-    max-width: 1500px;
+    width: 100%;
     height: 8222 px;
     font-family: "Saira",sans-serif;
 }   
 header{
     background-color: black;
-    width: auto;
+    width: 100%;
     height: 637px;
     border: red, solid, 1px;
     display: flex;
+    flex-direction: row;
+}
+.logo{
+    
+    float: left;
 }
 header span a{
     text-decoration: none;
@@ -22,9 +27,10 @@ header span a{
     color: white;
 }
 
+
 #head_contain{
     background-color: black;
-    width: 1340px;
+    width: 100%;
     height: 83px;
     position: absolute;
     display: flex;
@@ -33,14 +39,22 @@ header span a{
     margin: 0px,14px,14px,0px;
     border: yellow, solid, 1px;
 }
+
+
+
 #head_contain span{
     padding: 5px;
 }
-
-#menu{
+.banner{
+    width: 100%;
+    background-image: url(img/home-1.jpg);
+    background-size: cover;
+    background-position:center ;
+}
+.banner #menu{
     display: flex;
     justify-content:center;
-    width: 1340px;
+    width: 100%;
     height: 166px;
     position: relative;
     margin-top: 83px;
@@ -48,25 +62,28 @@ header span a{
 }
 #menu span{
     color: white;
+    font-weight: 700;
     padding: 10px;
 }
 #menu_button{
     display: none;
 }
 #banner{
-    height: 388px;
-    width: 1340px;
-    position: absolute;
-    margin-top: 249px;
-    border: green, solid, 2px;
+    height: auto;
+    width: 100%;
     
+    border: green, solid, 2px;
+      
 }
 #banner h1{
     color: white;
     width: 800px;
     text-align: center;
-    margin-top: 25px;
-    margin-left:300px;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    margin-top: 5%;
+    margin-left:25%;
     
 }
 #banner button{
@@ -76,8 +93,8 @@ header span a{
     font-size: 12px;
     padding: 10px;
     width: 170px;
-    margin-left: 600px;
-    margin-top: 125px;
+    margin-top: 5%;
+    margin-left:40%;
     text-align:center;
     position: relative;
     align-items: center;
@@ -86,7 +103,7 @@ header span a{
 
 
 main{
-    width: auto;
+    width: 100%;
     /*height: 800px;*/
     border: blue, solid, 4px;
     position: relative;
@@ -100,27 +117,54 @@ main{
     justify-content:center;
     align-items: center;
     font-size: large;
-    width: 728px;
+    width: 100%;
     height: 60px;
     text-align: center;
     border: magenta, solid, 2px;
 }
 
 #documentos{
-    margin: 25px auto 25px auto;
-    position: relative;
-    /*display: flex;
-    justify-content: flex-end;*/
-    width: 750px;
+    width: 100%;
     height: 517px;
-    border: red solid;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: red solid 4px;
+}
+#documentos #imagen{
+    border: magenta solid 1px;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+   /* position: relative;
+    display: flex;
+    justify-content: flex-start;*/
+}
+#imagen img{
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+    
+   
+}
+#secciones{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
 }
 #documentos section{
     text-align:justify;
-    width: auto;
-    margin: 10px 10px 10px 170px;
+    width: 100%;
+    height: 100%;
+    /*margin: 10px 10px 10px 10px;*/
     padding: 10px;
-    
+    border: yellow solid 2px;
 }
 #documentos h4{
     font-weight: 800;
@@ -144,10 +188,12 @@ main{
     margin: 5px 0px 0px 0px;
 }
 #centro{
-    background-color: black;
-    height: 377px;
+    background-image: url('img/home-2.jpg');
+    background-size: cover;
+    background-position: center;
+    height:auto;
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0px;
     position: relative;
     display: flex;
     flex-direction:column;
@@ -191,10 +237,18 @@ main{
     align-items: center;
     cursor: pointer;
 }
+.documentos_sistema{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 #documentos_sistema{
     border: red solid 2px;
     margin-top: 0px;
     height: 361px;
+    width: 50%;
     padding: 15px;
 }
 #documentos_sistema h5{
@@ -223,11 +277,13 @@ main{
 #documentos_sistema span{
     margin: 10px 10px 10px 110px;
 }
-
+#bombero_cansado img{
+    height: 100%;
+}
 
 
 footer{
-    width: auto;
+    width: 100%;
     height: 299px;
     margin-top: 2px;
     background-color: black;
@@ -240,12 +296,14 @@ footer span{
     color: white;
 }
 #contacto{
+    width: 33.33%;
     margin: 10px 50px 50px 75px;
     position: relative;
     display: flex;
     flex-direction: column;
 }
 #noticias{
+    width: 33.33%;
     margin: 10px 50px 50px 75px;
     position: relative;
     display: flex;
@@ -253,6 +311,7 @@ footer span{
     flex-direction: column;
 }
 #siguenos{
+    width: 33.33%;
     margin: 10px 50px 50px 75px;
     position: relative;
     display: flex;
