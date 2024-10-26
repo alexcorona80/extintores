@@ -5,28 +5,22 @@
 }
 body{
     width: 100%;
-    height: 8222 px;
+    height: auto;
     font-family: "Saira",sans-serif;
 }   
 header{
     background-color: black;
     width: 100%;
     height: 637px;
-    border: red, solid, 1px;
     display: flex;
     flex-direction: row;
 }
-.logo{
-    
-    float: left;
-}
+
 header span a{
     text-decoration: none;
     font-size: 12px;
-    /*color: #f2de00;*/
     color: white;
 }
-
 
 #head_contain{
     background-color: black;
@@ -34,22 +28,29 @@ header span a{
     height: 83px;
     position: absolute;
     display: flex;
-    justify-content:flex-end;
+    justify-content: space-between;
     align-items: center;
-    margin: 0px,14px,14px,0px;
-    border: yellow, solid, 1px;
+    margin: 0 0px;
 }
-
-
-
-#head_contain span{
+.menu a{
     padding: 5px;
+    text-decoration: none;
+    color: #f2de00;
 }
+.logo{
+    
+    float: left;
+    position: inherit;
+    
+}
+
 .banner{
     width: 100%;
     background-image: url(img/home-1.jpg);
     background-size: cover;
-    background-position:center ;
+    background-position:center;
+   
+    
 }
 .banner #menu{
     display: flex;
@@ -57,31 +58,27 @@ header span a{
     width: 100%;
     height: 166px;
     position: relative;
-    margin-top: 83px;
-    border: white, solid, 2px;
+    margin-top: 100px;
 }
-#menu span{
+#menu nav a{
     color: white;
-    font-weight: 700;
+    font-weight: 800;
     padding: 10px;
+    text-decoration: none;
+    font-family: "Saira",sans-serif;
 }
 #menu_button{
     display: none;
+
 }
 #banner{
     height: auto;
     width: 100%;
-    
-    border: green, solid, 2px;
-      
 }
 #banner h1{
     color: white;
     width: 800px;
     text-align: center;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
     margin-top: 5%;
     margin-left:25%;
     
@@ -105,8 +102,7 @@ header span a{
 main{
     width: 100%;
     /*height: 800px;*/
-    border: blue, solid, 4px;
-    position: relative;
+     position: relative;
     
 }
 #mensaje1{
@@ -120,7 +116,7 @@ main{
     width: 100%;
     height: 60px;
     text-align: center;
-    border: magenta, solid, 2px;
+    
 }
 
 #documentos{
@@ -132,23 +128,17 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: red solid 4px;
+    
 }
 #documentos #imagen{
-    border: magenta solid 1px;
     width: 50%;
     height: 100%;
     text-align: center;
-   /* position: relative;
-    display: flex;
-    justify-content: flex-start;*/
 }
 #imagen img{
     height: 100%;
     width: auto;
     margin: 0 auto;
-    
-   
 }
 #secciones{
     width: 50%;
@@ -164,7 +154,7 @@ main{
     height: 100%;
     /*margin: 10px 10px 10px 10px;*/
     padding: 10px;
-    border: yellow solid 2px;
+    
 }
 #documentos h4{
     font-weight: 800;
@@ -208,13 +198,12 @@ main{
     text-align: center;
     font-size: 1.5rem;
     padding: 10px;
-    border: white solid 2px;
+    
 }
 #botones{
     position:relative;
     display: flex;
     flex-direction: row;
-    border: white 2px solid;
     padding: 10px 10px 10px 10px;
     width: auto;
     margin-left: 50px;
@@ -245,7 +234,7 @@ main{
     justify-content: center;
 }
 #documentos_sistema{
-    border: red solid 2px;
+    
     margin-top: 0px;
     height: 361px;
     width: 50%;
@@ -287,16 +276,16 @@ footer{
     height: 299px;
     margin-top: 2px;
     background-color: black;
-    border: yellow solid 2px;
     position: relative;
     display: flex;
     flex-direction: row;
 }
 footer span{
     color: white;
+    
 }
 #contacto{
-    width: 33.33%;
+    width:33.33%;
     margin: 10px 50px 50px 75px;
     position: relative;
     display: flex;
@@ -317,6 +306,14 @@ footer span{
     display: flex;
     flex-direction: column;
 }
+#siguenos a{
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+}
+.redes_sociales {
+    padding: 20px;
+}
 #derechos{
     position:absolute;
     bottom:0;
@@ -324,4 +321,113 @@ footer span{
     transform:translateX(-50);
     width: auto;
     
+}
+/* Estilos generales para móviles */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centrado horizontal */
+        text-align: right;
+        
+    }
+
+    #head_contain {
+        padding: 15px; /* Espaciado adicional */
+    }
+    
+
+    .banner #menu {
+        flex-direction: column; /* Menú en columna */
+    }
+
+    #banner h1 {
+        font-size: 24px; /* Tamaño de fuente más pequeño */
+        margin: 10% 5%; /* Margen más pequeño */
+        text-align: left;
+        align-items: flex-start;
+
+    }
+
+    #banner .btn_acceso {
+        width: 80%; /* Botón más estrecho */
+        margin: 1% auto; /* Centrado automático */
+    }
+
+    #documentos {
+        flex-direction: column; /* Cambia a columna */
+    }
+
+    #documentos #imagen{
+        display: none;
+
+    }
+main #mensaje1{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+    #documentos,
+    #secciones {
+        width: auto; /* Elementos ocupan el 100% */
+        height: auto; /* Altura automática */
+    }
+
+    #botones {
+        flex-direction: column; /* Botones en columna */
+        align-items: center; /* Centrado horizontal */
+        margin-left: 0; /* Eliminar margen izquierdo */
+    }
+
+    #botones button {
+        width: 90%; /* Botón más estrecho */
+        margin: 10px 0; /* Margen vertical */
+    }
+    #documentos_sistema h5, h6, span {
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        text-align: left;
+       
+        width: 100%;
+        margin: 0 5px 0 10px;
+    }
+    #documentos_sistema span{
+        
+        width: 100%;
+        height: auto;
+        text-align: justify;
+        align-items: center;
+        
+    }
+    #bombero_cansado{
+        
+        width: 50%;
+    }
+
+    footer {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centrado horizontal */
+    }
+
+    #contacto, #noticias, #siguenos {
+        width: 100%; /* Elementos ocupan el 100% */
+        margin: 5px 0; /* Margen vertical */
+        align-items: center; /* Centrado horizontal */
+    }
+
+    #derechos {
+        margin: 20px 0; /* Margen vertical */
+        text-align: center; /* Centrado del texto */
+    }
+    #siguenos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .redes_sociales{
+        width: 100%;
+        padding: 25px;
+        margin: 25px;
+        font-size: 20px;
+    }
 }
