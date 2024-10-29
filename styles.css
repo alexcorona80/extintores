@@ -122,8 +122,8 @@ header span a{
 
 main{
     width: 100%;
-    /*height: 800px;*/
-     position: relative;
+    height: auto;
+    position: relative;
     
 }
 #mensaje1{
@@ -142,7 +142,7 @@ main{
 
 #documentos{
     width: 100%;
-    height: 517px;
+    height: auto;
     margin: auto;
     position: relative;
     display: flex;
@@ -151,9 +151,9 @@ main{
     align-items: center;
     
 }
-#documentos #imagen{
+#documentos .bombero_estacion img{
     width: 50%;
-    height: 100%;
+    height: auto;
     text-align: center;
 }
 #imagen img{
@@ -249,17 +249,17 @@ main{
 }
 .documentos_sistema{
     width: 100%;
-    height: 500px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 #documentos_sistema{
-    
     margin-top: 0px;
-    height: 361px;
+    height: auto;
     width: 50%;
     padding: 15px;
+    
 }
 #documentos_sistema h5{
     font-weight: 800;
@@ -287,8 +287,19 @@ main{
 #documentos_sistema span{
     margin: 10px 10px 10px 110px;
 }
+#bombero_cansado{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+}
 #bombero_cansado img{
-    height: 100%;
+    width: 50%;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -364,8 +375,11 @@ footer span{
     #banner h1 {
         font-size: 24px; /* Tamaño de fuente más pequeño */
         margin: 10% 5%; /* Margen más pequeño */
-        text-align: left;
+        text-align: center;
         align-items: flex-start;
+        width: 75%;
+        height: auto;
+        font-size: small;
 
     }
 
@@ -378,79 +392,84 @@ footer span{
         flex-direction: column; /* Cambia a columna */
     }
 
-    #documentos #imagen{
-        width: auto;
-        height: auto;
-        
+    .bombero_estacion{
+        max-width:100%;
+        max-height:100%;
+    }
+    main #mensaje1{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+        #documentos,
+        #secciones {
+            width: auto; /* Elementos ocupan el 100% */
+            height: auto; /* Altura automática */
+        }
 
-    }
-main #mensaje1{
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-    #documentos,
-    #secciones {
-        width: auto; /* Elementos ocupan el 100% */
-        height: auto; /* Altura automática */
-    }
+        #botones {
+            flex-direction: column; /* Botones en columna */
+            align-items: center; /* Centrado horizontal */
+            margin-left: 0; /* Eliminar margen izquierdo */
+        }
 
-    #botones {
-        flex-direction: column; /* Botones en columna */
-        align-items: center; /* Centrado horizontal */
-        margin-left: 0; /* Eliminar margen izquierdo */
-    }
+        #botones button {
+            width: 90%; /* Botón más estrecho */
+            margin: 10px 0; /* Margen vertical */
+        }
+        .documentos_sistema{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            margin-top:1px;
+        }
+        #documentos_sistema h5, h6, span {
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            text-align: left;
+            width: 100%;
+            margin: 0 5px 0 10px;
+        }
+       /* #documentos_sistema span{
+            
+            width: 100%;
+            height: auto;
+            text-align: justify;
+            align-items: center;
+            
+        }*/
+        #bombero_cansado img{
+            
+            width: 100%;
+            height: auto;
+        }
 
-    #botones button {
-        width: 90%; /* Botón más estrecho */
-        margin: 10px 0; /* Margen vertical */
-    }
-    #documentos_sistema h5, h6, span {
-        display: flex;
-        flex-direction: column;
-        font-size: 15px;
-        text-align: left;
-       
-        width: 100%;
-        margin: 0 5px 0 10px;
-    }
-    #documentos_sistema span{
-        
-        width: 100%;
-        height: auto;
-        text-align: justify;
-        align-items: center;
-        
-    }
-    #bombero_cansado{
-        
-        width: 50%;
-    }
+        footer {
+            flex-direction: column; /* Cambia a columna */
+            align-items: center; /* Centrado horizontal */
+        }
 
-    footer {
-        flex-direction: column; /* Cambia a columna */
-        align-items: center; /* Centrado horizontal */
-    }
+        #contacto, #noticias, #siguenos {
+            width: 100%; /* Elementos ocupan el 100% */
+            margin: 5px 0; /* Margen vertical */
+            align-items: center; /* Centrado horizontal */
+        }
 
-    #contacto, #noticias, #siguenos {
-        width: 100%; /* Elementos ocupan el 100% */
-        margin: 5px 0; /* Margen vertical */
-        align-items: center; /* Centrado horizontal */
-    }
-
-    #derechos {
-        margin: 20px 0; /* Margen vertical */
-        text-align: center; /* Centrado del texto */
-    }
-    #siguenos{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .redes_sociales{
-        width: 100%;
-        padding: 25px;
-        margin: 25px;
-        font-size: 20px;
-    }
+        #derechos {
+            margin: 20px 0; /* Margen vertical */
+            text-align: center; /* Centrado del texto */
+        }
+        #siguenos{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .redes_sociales{
+            width: 100%;
+            padding: 25px;
+            margin: 25px;
+            font-size: 20px;
+        }
 }
