@@ -126,7 +126,6 @@ main{
 
 #mensaje1{
     margin-top: 20px;
-    padding: auto;
     position: relative;
     width: 100%;
     height: 60px;
@@ -409,8 +408,10 @@ footer span{
         display: flex;
         flex-direction: column;
     }
-    main #mensaje1{
+    main #mensaje1 span{
         margin-top: 25px;
+        
+        text-align: center;
         
     }
         #documentos,
