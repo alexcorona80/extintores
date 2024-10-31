@@ -79,6 +79,11 @@ header span a{
     position: relative;
     margin-top: 100px;
 }
+#menu nav{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
 #menu nav a{
     color: white;
     font-weight: 800;
@@ -93,16 +98,21 @@ header span a{
 #banner{
     height: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 #banner h1{
     color: white;
-    width: 800px;
+    width: 50;
     text-align: center;
     margin-top: 5%;
-    margin-left:25%;
+    
     
 }
-#banner button{
+.btn_acceso{
     background-color: #f2de00;
     border-radius:10px;
     color: white;
@@ -110,10 +120,8 @@ header span a{
     padding: 10px;
     width: 170px;
     margin-top: 5%;
-    margin-left:40%;
     text-align:center;
     position: relative;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -128,7 +136,7 @@ main{
     margin-top: 20px;
     position: relative;
     width: 100%;
-    height: 60px;
+    height: auto;
     font-size: large;
     text-align: center;
 }
@@ -278,6 +286,8 @@ main{
     font-size: 20px;
 }
 #documentos_sistema span{
+    width: 100%;
+    height: auto;
     margin: 10px 10px 10px 110px;
 }
 #bombero_cansado{
@@ -373,17 +383,45 @@ footer span{
     #head_contain {
         padding: 15px; /* Espaciado adicional */
     }
+    .banner #menu nav{
+    display: none;
     
-
-    .banner #menu {
-        flex-direction: column; /* Menú en columna */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px; 
+    background-color: #f0f0f0; 
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     }
+
+    #menu #menu_button{
+        display: block;
+        position: relative;
+        text-align: right;
+        font-size: 30px;
+        font-weight: bold;
+        color: blue;
+        width: 100%;
+        margin-right: 10px;
+        height: auto;
+        cursor: pointer;
+        
+        
+    }
+    #menu #menu_button:hover .banner #menu nav {
+        display: block;
+    }
+
+
+    
 
     #banner h1 {
         font-size: 24px; /* Tamaño de fuente más pequeño */
         margin: 10% 5%; /* Margen más pequeño */
         text-align: center;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         width: 75%;
         height: auto;
         font-size: small;
@@ -391,8 +429,11 @@ footer span{
     }
 
     #banner .btn_acceso {
-        width: 80%; /* Botón más estrecho */
+        width: 50%; /* Botón más estrecho */
         margin: 1% auto; /* Centrado automático */
+        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     #documentos {
@@ -402,6 +443,8 @@ footer span{
     .bombero_estacion{
         max-width:100%;
         max-height:100%;
+        margin: 0 0 0 0;
+        text-align: center;
     }
     main{
       
@@ -409,8 +452,9 @@ footer span{
         flex-direction: column;
     }
     main #mensaje1 span{
-        margin-top: 25px;
-        
+        width: 100%;
+        margin-left: 0;
+        font-size: small;
         text-align: center;
         
     }
@@ -418,6 +462,7 @@ footer span{
         #secciones {
             width: auto; /* Elementos ocupan el 100% */
             height: auto; /* Altura automática */
+            margin: 5px 5px 5px 10px;
         }
 
         #botones {
@@ -431,23 +476,40 @@ footer span{
             margin: 10px 0; /* Margen vertical */
         }
         .documentos_sistema{
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             justify-items: center;
             margin-top:1px;
         }
-        #documentos_sistema h5, h6, span {
+        #documentos_sistema{
+            width: 100%;
+        }
+        #documentos_sistema h5 {
             display: flex;
             flex-direction: column;
             font-size: 15px;
             text-align: left;
             width: 100%;
-            margin: 0 5px 0 10px;
+            margin: 5px 5px 5px 10px;
+        }
+        #documentos_sistema h6{
+            font-size: 15px;
+            text-align: left;
+            width: 100%;
+            margin: 0px 0px 0px 10px;
+        }
+        #documentos_sistema span{
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            text-align: left;
+            margin: 5px 5px 5px 10px;
         }
        
         #bombero_cansado img{
-            
+            text-align: center;
             width: 100%;
             height: auto;
         }
