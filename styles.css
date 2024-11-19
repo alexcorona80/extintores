@@ -374,6 +374,13 @@ footer span{
     text-align: center;
     /* No need for margin-top, as it's already at the bottom */
 }
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black solid 1px;
+}
 
 /* Estilos generales para móviles */
 @media (max-width: 767px) {
@@ -403,10 +410,7 @@ footer span{
     align-items: center;
     height: auto;
     width: 50%;
-    z-index: 10;
-    }
-    .banner .menu_banner .logo img{
-        margin-top: 50px;
+    z-index: -5;
     }
 
     #menu #menu_button{
@@ -426,10 +430,10 @@ footer span{
     .banner #menu.active nav{
         display: block;
     }
-    /*#menu #menu_button:hover .banner #menu nav {
+    #menu #menu_button:hover .banner #menu nav {
         display: block;
         
-    }*/
+    }
 
 
     
